@@ -7,7 +7,7 @@ import { store } from './redux'
 import TodoInput from './components/TodoInput'
 import TodoList from './components/TodoList'
 
-function App() {
+const App = () => {
   return (
     <Provider store={store}>
       <div className="main">
