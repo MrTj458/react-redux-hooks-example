@@ -15,31 +15,31 @@ function todoReducer(state = [], { type, payload }) {
     case 'ADD_TODO':
       return [...state, payload]
     case 'TOGGLE_TODO':
-      return state.map((todo) =>
+      return state.map(todo =>
         todo.id === payload ? { ...todo, complete: !todo.complete } : todo
       )
     case 'DELETE_TODO':
-      return state.filter((todo) => todo.id !== payload)
+      return state.filter(todo => todo.id !== payload)
     default:
       return state
   }
 }
 
-export const addTodoAction = (todo) => {
+export const addTodoAction = todo => {
   return {
     type: 'ADD_TODO',
     payload: todo,
   }
 }
 
-export const toggleTodoAction = (todoId) => {
+export const toggleTodoAction = todoId => {
   return {
     type: 'TOGGLE_TODO',
     payload: todoId,
   }
 }
 
-export const deleteTodoAction = (todoId) => {
+export const deleteTodoAction = todoId => {
   return {
     type: 'DELETE_TODO',
     payload: todoId,

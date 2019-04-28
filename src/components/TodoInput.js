@@ -3,15 +3,15 @@ import { useActions } from 'react-redux'
 import { addTodoAction } from '../redux'
 import uuid from 'uuid/v4'
 
-const TodoInput = () => {
+export default function TodoInput() {
   const [todo, setTodo] = useState('')
-  const addTodo = useActions((todo) => addTodoAction(todo))
+  const addTodo = useActions(todo => addTodoAction(todo))
 
-  const onChange = (event) => {
+  const onChange = event => {
     setTodo(event.target.value)
   }
 
-  const onSubmit = (event) => {
+  const onSubmit = event => {
     event.preventDefault()
 
     if (todo.trim() === '') return
@@ -40,5 +40,3 @@ const TodoInput = () => {
     </form>
   )
 }
-
-export default TodoInput

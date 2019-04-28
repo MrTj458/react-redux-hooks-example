@@ -7,7 +7,7 @@ import { store } from './redux'
 import TodoInput from './components/TodoInput'
 import TodoList from './components/TodoList'
 
-const App = () => {
+export default function App() {
   return (
     <Provider store={store}>
       <div className="main">
@@ -17,5 +17,3 @@ const App = () => {
     </Provider>
   )
 }
-
-export default App

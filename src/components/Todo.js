@@ -2,7 +2,7 @@ import React from 'react'
 import { useActions } from 'react-redux'
 import { toggleTodoAction, deleteTodoAction } from '../redux'
 
-const Todo = ({ todo: { id, name, complete } }) => {
+export default function Todo({ todo: { id, name, complete } }) {
   const toggleTodo = useActions(() => toggleTodoAction(id))
   const deleteTodo = useActions(() => deleteTodoAction(id))
 
@@ -16,5 +16,3 @@ const Todo = ({ todo: { id, name, complete } }) => {
     </li>
   )
 }
-
-export default Todo
