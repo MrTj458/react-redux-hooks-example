@@ -1,9 +1,9 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
-import Todo from './Todo'
+import React from "react";
+import { useSelector } from "react-redux";
+import Todo from "./Todo";
 
 export default function TodoList() {
-  const todos = useSelector(state => state.todos)
+  const todos = useSelector(state => state.todos);
 
   return (
     <ul className="todo-list">
@@ -11,5 +11,5 @@ export default function TodoList() {
         <Todo key={todo.id} todo={todo} />
       ))}
     </ul>
-  )
+  );
 }

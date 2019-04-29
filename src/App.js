@@ -1,11 +1,11 @@
-import React from 'react'
-import './App.css'
+import React from "react";
+import "./App.css";
 
-import { Provider } from 'react-redux'
-import { store } from './redux'
+import { Provider } from "react-redux";
+import { store } from "./redux";
 
-import TodoInput from './components/TodoInput'
-import TodoList from './components/TodoList'
+import TodoInput from "./components/TodoInput";
+import TodoList from "./components/TodoList";
 
 export default function App() {
   return (
@@ -15,5 +15,5 @@ export default function App() {
         <TodoList />
       </div>
     </Provider>
-  )
+  );
 }
